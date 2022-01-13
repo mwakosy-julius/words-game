@@ -2,51 +2,76 @@
 <html>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>GAME</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
 	</head>
 
 	<body>
-		<div id="wrapper">
-			<div class="d-flex align-items-center" id="top">
-				<p><%= temp %></p>
-			</div>
-			<hr>
-			<div class="d-flex flex-row justify-content-center" id="main">
-				<form class="form-control form-control-dark" id="answer" method="post">
-					<input type="text" name="word" id="entrance">
-					<input type="submit" name="OK" value="OK" id="ok">
-				</form>
-			</div>
+		<div class="cover-container d-flex p-3 mx-auto flex-column mt-2">
+			
+			
+
+			 <main class="px-3 border rounded-2 mt-2">
+			 	<header class="mb-auto mt-2 d-flex justify-content-center">
+				    <div class="text-center">
+				      <h1> WORD-CHALLENGE APP </h1>
+				      <h6>write a word beggining with the last letter of the previous word</h6>
+				    </div>
+			 	</header>
+
+				<div class="d-flex align-items-center m-2 p-2 border-bottom">
+					<p style="font-size: 1.5rem;"><%= temp %></p>
+				</div>
+
+				<div class="d-flex flex-row justify-content-center m-2 mt-2 px-3 p-2">
+					<form class="" id="answer" method="post" autocomplete="off">
+						<input type="text" class="text-center" name="word" id="entrance" autocomplete="off">
+						<input type="submit" name="OK" value="OK" id="ok">
+					</form>
+				</div>
+
+				<footer class="d-flex justify-content-center mt-auto text-white-50">
+    				<p>@GeneTech</p>
+  				</footer>
+
+			</main>
+
+			
 		</div>
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
 	</body>
 
 </html>
 
 <style type="text/css">
-#wrapper{
-	display: flex;
-	position: relative;
-	justify-content: center;
-	margin-top: 10rem;
-	flex-direction: column;
-	border: 0.1rem solid grey;
-	border-radius: 0.5rem;
-	margin: 1rem;
-	padding: 0.5rem;
+html,
+body {
+  margin: 0;
+  padding: 0;
 }
 
-#top{
-	display: flex;
-	justify-content: center;
-	position: relative;
-	border-bottom: 0.1rem solid grey;
-	margin: 0.5rem;
-	padding: 0.5rem;
+* {
+  box-sizing: border-box;
 }
 
-#main{
+body {
+  font-family: "Quicksand", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
+  height: 100vh;
+  width: 100vw;
+}
+
+.cover-container {
+  max-width: 60em;
+  height: 100%;
+}
+
+#sub-main{
 	display: flex;
 	justify-content: center;		
 	position: relative;
@@ -64,6 +89,7 @@
 	flex-direction: column;
 	margin: 0.5rem;
 	padding: 0.5rem;
+	text-align: center;
 }
 
 #entrance{
@@ -74,6 +100,7 @@
 	width: 15rem;
 	height: 3rem;
 	margin-bottom: 0.5rem;
+	font-size: 1.5rem;
 }
 
 #ok{
@@ -84,6 +111,8 @@
 	width: 15rem;
 	height: 2rem;
 }
+
+
 </style>
 
 <script type="text/javascript">
