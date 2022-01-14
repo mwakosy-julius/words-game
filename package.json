@@ -9,7 +9,6 @@
   "name": "wordsgame",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
   "scripts": {
     "start": "node app.js"
   },
